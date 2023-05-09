@@ -1,8 +1,8 @@
 # Inicio ao Java com spring
 
-# O que aprendi:
+# 1. O que aprendi:
 
-# 1. Conceitos
+# 1.1 Conceitos
 ## 1.1 Sistemas web e recursos
 ## 1.1 Cliente/Servidor, HTTP,JSON
 ## 1.1 Padrão Rest para API web
