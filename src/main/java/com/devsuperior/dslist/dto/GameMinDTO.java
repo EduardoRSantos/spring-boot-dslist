@@ -1,6 +1,7 @@
 package com.devsuperior.dslist.dto;
 
 import com.devsuperior.dslist.entitites.Game;
+import com.devsuperior.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
     
@@ -19,6 +20,14 @@ public class GameMinDTO {
         this.shortDescription = entity.getShortDescription();
     }
 
+public GameMinDTO(GameMinProjection gameMinProjection) {
+
+        this.id = gameMinProjection.getId();
+        this.title = gameMinProjection.getTitle();
+        this.year = gameMinProjection.getYear();
+        this.imgUrl = gameMinProjection.getImgUrl();
+        this.shortDescription = gameMinProjection.getShortDescription();
+    }
     public GameMinDTO(){
 
     }
