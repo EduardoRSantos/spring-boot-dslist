@@ -16,13 +16,12 @@ import jakarta.transaction.Transactional;
 
 @Service
 public class GameServices {
-    
+
     @Autowired
     private GameRepository gameRepository;
 
-    
     @Transactional
-    public List<GameMinDTO> findByList(Long listId){
+    public List<GameMinDTO> findByList(Long listId) {
         List<GameMinProjection> result = gameRepository.searchByList(listId);
         return result.stream().map(x -> new GameMinDTO(x)).toList();
     }
@@ -34,10 +33,9 @@ public class GameServices {
     }
 
     @Transactional
-    public List<GameMinDTO> findAll(){
+    public List<GameMinDTO> findAll() {
         List<Game> result = gameRepository.findAll();
         return result.stream().map(x -> new GameMinDTO(x)).toList();
     }
 
-    
 }

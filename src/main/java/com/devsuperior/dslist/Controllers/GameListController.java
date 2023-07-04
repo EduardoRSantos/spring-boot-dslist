@@ -13,7 +13,6 @@ import com.devsuperior.dslist.dto.GameMinDTO;
 import com.devsuperior.dslist.services.GameListServices;
 import com.devsuperior.dslist.services.GameServices;
 
-
 @RestController
 @RequestMapping(value = "/lists")
 public class GameListController {
@@ -30,6 +29,6 @@ public class GameListController {
 
     @GetMapping(value = "/{listId}/games")
     public List<GameMinDTO> findByID(@PathVariable Long listId) {
-         return gameService.findByList(listId);
+        return gameService.findByList(listId);
     }
 }
