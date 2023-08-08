@@ -1,6 +1,6 @@
 # Projeto DSList - Intensivão Java Spring
 
-**Este projeto é um Projeto web services. Ele foi criado por Dr. Nelio Alves.**
+**Este é um projeto web services. Ele foi criado por Dr. Nelio Alves.**
 
 https://devsuperior.com.br
 
