@@ -3,44 +3,25 @@ package com.devsuperior.dslist.entitites;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Embeddable
 public class BelongingPk {
 
     @ManyToOne
     @JoinColumn(name = "game_id")
     private Game game;
-
     
     @ManyToOne
     @JoinColumn(name = "list_id")
     private GameList gameList;
-
-    public BelongingPk(){
-
-    }
-
-    public BelongingPk(Game game, GameList gameList) {
-        this.game = game;
-        this.gameList = gameList;
-    }
-
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
-        this.game = game;
-    }
-
-    public GameList getGameList() {
-        return gameList;
-    }
-
-    public void setGameList(GameList gameList) {
-        this.gameList = gameList;
-    }
 
     @Override
     public int hashCode() {
@@ -59,7 +40,7 @@ public class BelongingPk {
             return false;
         if (getClass() != obj.getClass())
             return false;
-            BelongingPk other = (BelongingPk) obj;
+        BelongingPk other = (BelongingPk) obj;
         if (game == null) {
             if (other.game != null)
                 return false;
@@ -72,7 +53,5 @@ public class BelongingPk {
             return false;
         return true;
     }
-
-    
 
 }
